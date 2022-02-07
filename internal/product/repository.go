@@ -55,8 +55,8 @@ func (r *repository) GetByName(name string) models.Product {
 }
 
 func (r *repository) Store(product models.Product) (models.Product, error) {
-	db := db.StorageDB                     // se inicializa la base
-	stmt, err := db.Prepare(InsertProduct) // se prepara el SQL
+	//db := db.StorageDB                     // se inicializa la base
+	stmt, err := r.db.Prepare(InsertProduct) // se prepara el SQL
 	if err != nil {
 		log.Fatal(err)
 	}

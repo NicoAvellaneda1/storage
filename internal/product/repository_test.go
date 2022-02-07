@@ -78,7 +78,7 @@ func Test_sqlRepository_Store(t *testing.T) {
 	assert.NoError(t, err)
 	repository := NewRepo(db)
 
-	expectedProduct := models.Product{ID: 15, Name: "Aire", Type: "Smart", Count: 1, Price: 20.0}
+	expectedProduct := models.Product{ID: 16, Name: "Aire", Type: "Smart", Count: 1, Price: 20.0}
 
 	product := models.Product{Name: "Aire", Type: "Smart", Count: 1, Price: 20.0}
 
